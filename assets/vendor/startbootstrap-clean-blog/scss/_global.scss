@@ -74,3 +74,11 @@ img::-moz-selection {
     color: $white;
     background: transparent;
 }
+
+pre code {
+    background-color: #eee;
+    border-radius: 10px;
+    display: block;
+    padding: 20px;
+    font-family: courier, monospace;
+}

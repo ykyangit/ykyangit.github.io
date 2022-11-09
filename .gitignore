@@ -3,3 +3,6 @@ _site
 node_modules
 Gemfile.lock
 *.gem
+*.xml
+*.iml
+.idea

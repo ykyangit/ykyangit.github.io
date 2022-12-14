@@ -1,0 +1,39 @@
+---
+layout: post
+title: "Jenkins 설치 방법"
+subtitle: "맥북에 설치"
+date: 2022-12-14 21:00:13 +0900
+background: '/img/posts/06.jpg'
+---
+
+<h2 class="section-heading">Jenkins 설치</h2>
+<p></p>
+<pre><code>brew install jenkins-lts
+
+brew services stop jenkins-lts
+
+brew remove jenkins-lts
+
+rm -rf /Users/yyk/.jenkins
+
+brew services start jenkins-lts
+</code></pre>
+
+<p>경로 찾기</p>
+<pre><code>readlink /usr/local/bin/jenkins</code></pre>
+
+<p>포트 변경</p>
+<pre><code>
+cd /usr/local/Cellar/jenkins-lts/2.361.4
+vi ./homebrew.mxcl.jenkins.plist
+--httpPort=8080 에서 포트 부분만 변경
+</code></pre>
+
+<p>빌드경로</p>
+<pre><code>.jenkins/workspace/</code></pre>
+
+<p>WAR 빌드 경로</p>
+<pre><code>/usr/local/Cellar/jenkins/2.309/libexec/jenkins.war</code></pre>
+
+<p>최초 설치시 password</p>
+<pre><code>cat /Users/yyk/.jenkins/secrets/initialAdminPassword</code></pre>
